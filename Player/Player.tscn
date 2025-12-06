@@ -1,16 +1,40 @@
-[gd_scene format=3 uid="uid://chdvsotkxkr4v"]
+[gd_scene load_steps=3 format=3 uid="uid://chdvsotkxkr4v"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l2ndj"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_3qydi"]
 
-[node name="Player" type="CharacterBody3D" unique_id=133706138]
+[node name="Player" type="CharacterBody3D"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=354445251]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_l2ndj")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=956425511]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-visible = false
 mesh = SubResource("CapsuleMesh_3qydi")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5653058, -0.29458094)
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="Camera3D"]
+remote_path = NodePath("../../SubViewportContainer/SubViewport/Camera3D")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5653058, -0.29458094)
+keep_aspect = 0
+fov = 97.69298
+
+[node name="BaseBallBatHolder" type="Node3D" parent="SubViewportContainer/SubViewport/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.122047305, -0.55690634)
