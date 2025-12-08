@@ -1,0 +1,287 @@
+[gd_scene format=3 uid="uid://c484d3hbte6jo"]
+
+[ext_resource type="Script" uid="uid://cehopy88o61bj" path="res://FlyingBat/enemy_bat.gd" id="1_8lkhw"]
+[ext_resource type="PackedScene" uid="uid://rrmamcq55oeu" path="res://FlyingBat/bat_animflapping_editable.tscn" id="2_jp0ae"]
+
+[sub_resource type="Animation" id="Animation_8lkhw"]
+resource_name = "FlyOffWall"
+length = 2.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bat_animflapping:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.14, 0.34, 0.52),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, -3.1415927), Vector3(0, 1.5707964, -2.7139869), Vector3(0, 1.5707964, -2.2165682), Vector3(0, 1.5707964, -1.2042772)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bat_animflapping:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.14, 0.34, 0.52),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.1503813, 0), Vector3(0, 0.02, 0), Vector3(0, -0.06, 0), Vector3(0, -0.17, 0)]
+}
+tracks/2/type = "animation"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("bat_animflapping/AnimationPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": PackedStringArray("flapping"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_jp0ae"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bat_animflapping:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.1503813, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bat_animflapping:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -3.1415925)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jp0ae"]
+_data = {
+&"FlyOffWall": SubResource("Animation_8lkhw"),
+&"RESET": SubResource("Animation_jp0ae")
+}
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8lkhw"]
+radius = 0.20458984
+height = 0.80688477
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jp0ae"]
+radius = 0.2055664
+height = 0.7714844
+
+[node name="EnemyBat" type="Node3D" unique_id=1586485534]
+script = ExtResource("1_8lkhw")
+
+[node name="bat_animflapping" parent="." unique_id=1169643393 instance=ExtResource("2_jp0ae")]
+transform = Transform3D(-10, 1.509958e-06, 0, -1.509958e-06, -10, 0, 0, 0, 10, 0, 0.1503813, 0)
+
+[node name="Skeleton3D" parent="bat_animflapping" index="0" unique_id=1460186665]
+bones/0/position = Vector3(0.00073100143, 0.015921017, 5.4460156e-07)
+bones/1/rotation = Quaternion(0.99922675, 0.001197139, -0.0393003, -3.3361124e-05)
+bones/2/rotation = Quaternion(-6.4049345e-05, 0.06258051, 0.0010214642, 0.9980394)
+bones/3/rotation = Quaternion(0.00048814903, -0.10837128, -0.004477839, 0.99410033)
+bones/5/rotation = Quaternion(0.01442821, -0.011411474, 0.2736502, 0.9616534)
+bones/8/rotation = Quaternion(-8.50084e-09, -2.1589208e-09, 0.33223608, 0.9431963)
+bones/11/position = Vector3(-0.0011322328, 0.0034956655, 0.0005401217)
+bones/11/rotation = Quaternion(0.6438487, 0.76482826, -0.020148052, -0.009531963)
+bones/12/rotation = Quaternion(-0.020156227, -0.089024775, 0.38422912, 0.9187145)
+bones/13/rotation = Quaternion(0.21341227, 0.19756973, -0.41318437, 0.8629601)
+bones/15/position = Vector3(0.008914454, -0.010523241, -0.00093659793)
+bones/16/position = Vector3(0.00023534613, -0.0140219955, -0.00020308502)
+bones/17/position = Vector3(-0.0011322282, -0.003477615, 0.0005401212)
+bones/17/rotation = Quaternion(0.63239723, 0.77432364, -0.0056367763, -0.021564534)
+bones/18/rotation = Quaternion(-0.00977182, 0.090753466, 0.09121299, 0.9916393)
+bones/19/rotation = Quaternion(0.22774811, -0.18085733, -0.22038127, 0.9310497)
+bones/21/position = Vector3(0.0007134403, -0.013768631, -0.0014194406)
+bones/22/position = Vector3(0.009434568, -0.010375971, -0.0003361829)
+bones/23/rotation = Quaternion(-0.40172532, 0.01736316, 0.9147278, -0.039855886)
+bones/25/rotation = Quaternion(0.40172532, -0.01736316, 0.9147278, -0.039855886)
+
+[node name="Eyes" parent="bat_animflapping/Skeleton3D" index="0" unique_id=1516674506]
+transform = Transform3D(-0.0011206786, -0.084050365, 0.996461, 0.013285069, 0.9963721, 0.08405776, -0.99991125, 0.013332251, 4.228495e-09, 0.004246774, 0.03676373, 6.280494e-05)
+
+[node name="Hip" parent="bat_animflapping/Skeleton3D" index="2" unique_id=1240255438]
+transform = Transform3D(0.08628463, 3.0130148e-05, 0.99627054, 0.99627036, 0.0003478527, -0.08628467, -0.00034916398, 1, 0, 0.00073100143, 0.015921017, 5.4460156e-07)
+
+[node name="Tammy" parent="bat_animflapping/Skeleton3D" index="3" unique_id=1985593654]
+transform = Transform3D(0.007771097, 1.5906393e-05, -0.99996984, 0.9999675, 0.002046911, 0.0077711493, 0.0020469641, -0.9999981, -1.888111e-09, 0.00062438165, 0.022250762, -1.6522229e-06)
+
+[node name="Chest" parent="bat_animflapping/Skeleton3D" index="4" unique_id=1278858778]
+transform = Transform3D(0.13262224, -5.784395e-10, -0.9911667, 0.9911664, 3.3760216e-08, 0.13262224, 2.4450241e-08, -1.0000002, 1.1243724e-09, 0.0014810108, 0.028579125, 9.025245e-06)
+
+[node name="Neck" parent="bat_animflapping/Skeleton3D" index="5" unique_id=1560971540]
+transform = Transform3D(-0.084054425, -0.0007572478, -0.996461, 0.9964202, 0.008976791, -0.08405776, 0.00900867, -0.9999596, -4.228495e-09, 0.0010928535, 0.030506955, 9.025292e-06)
+
+[node name="Haed" parent="bat_animflapping/Skeleton3D" index="6" unique_id=1863566879]
+transform = Transform3D(-0.0011206786, -0.084050365, 0.996461, 0.013285069, 0.9963721, 0.08405776, -0.99991125, 0.013332251, 4.228495e-09, 0.004246774, 0.03676373, 6.280494e-05)
+
+[node name="Ear_1_L" parent="bat_animflapping/Skeleton3D" index="7" unique_id=1669798422]
+transform = Transform3D(-0.0154229775, -0.04940878, 0.9986596, 0.53787625, 0.8415429, 0.04994216, -0.8428827, 0.5379258, 0.013596722, 0.0044963923, 0.036229353, -0.00384894)
+
+[node name="Ear_2_L" parent="bat_animflapping/Skeleton3D" index="8" unique_id=105750801]
+transform = Transform3D(-0.024637725, -0.045520086, 0.9986596, 0.68968654, 0.7223834, 0.04994216, -0.7236886, 0.6899929, 0.013596722, 0.0033554803, 0.038672253, -0.0069721136)
+
+[node name="Ear_3_L" parent="bat_animflapping/Skeleton3D" index="9" unique_id=1806933773]
+transform = Transform3D(0.9986596, -0.049476452, -0.015204482, 0.04994216, 0.99824053, 0.031955034, 0.013596722, -0.032671392, 0.9993738, 0.0037788157, 0.041662518, -0.010074825)
+
+[node name="Ear_1_R" parent="bat_animflapping/Skeleton3D" index="10" unique_id=1713053862]
+transform = Transform3D(-0.053549968, -0.06479292, 0.996461, 0.6348063, 0.76808524, 0.08405778, -0.7708135, 0.6370611, 1.4143445e-08, 0.0044963844, 0.036229394, 0.003866991)
+
+[node name="Ear_2_R" parent="bat_animflapping/Skeleton3D" index="11" unique_id=1834857728]
+transform = Transform3D(-0.065011695, -0.053284146, 0.996461, 0.77067906, 0.6316548, 0.08405777, -0.63389844, 0.7734165, 2.466051e-08, 0.0032457311, 0.03844676, 0.0071138903)
+
+[node name="Ear_3_R" parent="bat_animflapping/Skeleton3D" index="12" unique_id=468924148]
+transform = Transform3D(0.996461, -0.0837179, 0.0075520873, 0.08405777, 0.9924309, -0.089526206, 2.466051e-08, 0.08984426, 0.995956, 0.0035398828, 0.041263983, 0.0103887785)
+
+[node name="Clavicle_L" parent="bat_animflapping/Skeleton3D" index="13" unique_id=1827505873]
+transform = Transform3D(-0.011379836, 0.17327756, 0.9848073, -0.17073508, 0.9700714, -0.1726577, -0.9852515, -0.17010601, 0.018545311, 0.00079550094, 0.027528526, -0.0034866412)
+
+[node name="Elbow_L" parent="bat_animflapping/Skeleton3D" index="14" unique_id=1628546087]
+transform = Transform3D(0.26095292, 0.026121981, 0.96499795, 0.5451603, 0.82098746, -0.16964492, -0.7966831, 0.57034826, 0.1999985, 0.000757981, 0.026344763, -0.012515128)
+
+[node name="Hand_L" parent="bat_animflapping/Skeleton3D" index="15" unique_id=1889247089]
+transform = Transform3D(-0.3641835, 0.42080984, 0.83083653, -0.11200812, 0.8658339, -0.4876325, -0.92456746, -0.2706483, -0.26818848, 0.004026154, 0.032667868, -0.021086339)
+
+[node name="Finger_3_L" parent="bat_animflapping/Skeleton3D" index="16" unique_id=1065637152]
+transform = Transform3D(0.52538955, -0.1835111, -0.83083653, 0.8461882, 0.2148946, 0.4876325, 0.08905628, -0.9592416, 0.26818848, -0.0028840923, 0.030542556, -0.038629662)
+
+[node name="Finger_2_L" parent="bat_animflapping/Skeleton3D" index="17" unique_id=538309789]
+transform = Transform3D(-0.3641835, 0.42080984, 0.83083653, -0.11200812, 0.8658339, -0.4876325, -0.92456746, -0.2706483, -0.26818848, -0.0044267857, 0.023014713, -0.02622907)
+
+[node name="Finger_1_L" parent="bat_animflapping/Skeleton3D" index="18" unique_id=1684160298]
+transform = Transform3D(-0.3641835, 0.42080984, 0.83083653, -0.11200812, 0.8658339, -0.4876325, -0.92456746, -0.2706483, -0.26818848, -0.002128879, 0.02059982, -0.017454438)
+
+[node name="Clavicle_R" parent="bat_animflapping/Skeleton3D" index="19" unique_id=1281734072]
+transform = Transform3D(-0.05245515, 0.16553874, 0.98480755, -0.1939742, 0.96569306, -0.17265774, -0.97960347, -0.20008408, -0.018545331, 0.000795502, 0.02752853, 0.0034866412)
+
+[node name="Elbow_R" parent="bat_animflapping/Skeleton3D" index="20" unique_id=2129558017]
+transform = Transform3D(-0.20007628, 0.16955328, 0.96499825, 0.016814847, 0.9853616, -0.16964503, -0.9796363, -0.017715659, -0.19999851, 0.00075796706, 0.026344748, 0.012515092)
+
+[node name="Hand_R" parent="bat_animflapping/Skeleton3D" index="21" unique_id=655319715]
+transform = Transform3D(-0.022983253, 0.55604166, 0.83083683, -0.51155967, 0.707475, -0.48763248, -0.8589404, -0.43623012, 0.26818854, 0.004026152, 0.03266787, 0.021086354)
+
+[node name="Finger_3_R" parent="bat_animflapping/Skeleton3D" index="22" unique_id=149035345]
+transform = Transform3D(0.52538955, 0.18351103, -0.83083683, 0.8461881, -0.21489486, 0.48763245, -0.089056745, -0.9592415, -0.26818854, -0.0028841044, 0.030542562, 0.03862971)
+
+[node name="Finger_2_R" parent="bat_animflapping/Skeleton3D" index="23" unique_id=1290438613]
+transform = Transform3D(-0.022983253, 0.5560417, 0.8308368, -0.51155967, 0.707475, -0.4876325, -0.8589404, -0.43623012, 0.26818857, -0.004825501, 0.023254108, 0.026099164)
+
+[node name="Finger_1_R" parent="bat_animflapping/Skeleton3D" index="24" unique_id=1018988933]
+transform = Transform3D(-0.022983253, 0.5560417, 0.8308368, -0.51155967, 0.707475, -0.4876325, -0.8589404, -0.43623012, 0.26818857, -0.00223947, 0.02066472, 0.017418772)
+
+[node name="femur_L" parent="bat_animflapping/Skeleton3D" index="25" unique_id=142560618]
+transform = Transform3D(-0.78898203, 0.06860715, 0.6105738, -0.6082783, 0.0528938, -0.79195935, -0.086629644, -0.9962407, -7.3050614e-09, 0.000491912, 0.015050122, -0.0028950665)
+
+[node name="Feet_L" parent="bat_animflapping/Skeleton3D" index="26" unique_id=980061195]
+transform = Transform3D(0.79195946, -0.61057395, 1.4041294e-08, 0.61057377, 0.7919595, -8.8182645e-08, 2.9802322e-08, 1.2671165e-07, 1.0000001, -0.0023722106, 0.012687567, -0.0032177435)
+
+[node name="femur_R" parent="bat_animflapping/Skeleton3D" index="27" unique_id=1553085401]
+transform = Transform3D(0.67265534, -0.058491793, 0.73764044, -0.73486733, 0.06390154, 0.6751936, -0.086629644, -0.9962407, 7.3050614e-09, 0.00049191155, 0.0150501225, 0.0028950702)
+
+[node name="Feet_R" parent="bat_animflapping/Skeleton3D" index="28" unique_id=583916348]
+transform = Transform3D(-0.6751938, -0.7376406, 7.3769115e-08, 0.73764056, -0.6751938, 2.9917722e-09, 2.9802322e-08, 1.1210153e-07, 1.0000001, 0.0030876128, 0.01239547, 0.0032177402)
+
+[node name="ROOT_ctrl" parent="bat_animflapping" index="1" unique_id=1581273877]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.010815149, 0)
+
+[node name="Femur_L_ctrl" parent="bat_animflapping/ROOT_ctrl/Hip_ctrl" parent_id_path=PackedInt32Array(1169643393, 978554733) index="0" unique_id=831134679]
+transform = Transform3D(0.6766307, 0.7363226, 0, -0.7363226, 0.6766307, 0, 0, 0, 1, 0.000570685, -0.0008882775, -0.0028950665)
+
+[node name="Femur_R_ctrl" parent="bat_animflapping/ROOT_ctrl/Hip_ctrl" parent_id_path=PackedInt32Array(1169643393, 978554733) index="1" unique_id=1841021036]
+transform = Transform3D(0.6766307, -0.7363226, 0, 0.7363226, 0.6766307, 0, 0, 0, 1, 0.000570685, -0.0008882775, 0.0028950665)
+
+[node name="Tammy_ctrl" parent="bat_animflapping/ROOT_ctrl/Hip_ctrl" parent_id_path=PackedInt32Array(1169643393, 978554733) index="2" unique_id=485615279]
+transform = Transform3D(0.99691087, -0.078539915, 0, 0.078539915, 0.99691087, 0, 0, 0, 1, 6.938894e-20, 0.00629167, 0)
+
+[node name="Chest_ctrl" parent="bat_animflapping/ROOT_ctrl/Hip_ctrl/Tammy_ctrl" index="0" unique_id=1667220919]
+transform = Transform3D(0.99216735, 0.1249158, 0, -0.1249158, 0.99216735, 0, 0, 0, 1, -8.3266725e-19, 0.0064531486, 0)
+
+[node name="neck_ctrl" parent="bat_animflapping/ROOT_ctrl/Hip_ctrl/Tammy_ctrl/Chest_ctrl" index="0" unique_id=1505252364]
+transform = Transform3D(0.9765109, -0.21546821, 0, 0.21546821, 0.9765109, 0, 0, 0, 1, 1.110223e-18, 0.001881725, 0)
+
+[node name="Ear_L_1_ctrl" parent="bat_animflapping/ROOT_ctrl/Hip_ctrl/Tammy_ctrl/Chest_ctrl/neck_ctrl/Head_ctrl" parent_id_path=PackedInt32Array(1169643393, 1682124895) index="0" unique_id=1752216731]
+transform = Transform3D(0.9993232, 0.034608603, -0.012464605, -0.034179688, 0.99886674, 0.03312012, 0.013596721, -0.03267167, 0.9993736, 0.00020381607, -0.00055347045, -0.0039117443)
+
+[node name="Ear_R_1_ctrl" parent="bat_animflapping/ROOT_ctrl/Hip_ctrl/Tammy_ctrl/Chest_ctrl/neck_ctrl/Head_ctrl" parent_id_path=PackedInt32Array(1169643393, 1682124895) index="1" unique_id=1273465411]
+transform = Transform3D(1, 0, 0, 0, 0.99595577, -0.089844055, 0, 0.089844055, 0.99595577, 0.00020381607, -0.00055347045, 0.0037861355)
+
+[node name="Clavicle_L_ctrl" parent="bat_animflapping/ROOT_ctrl/Hip_ctrl/Tammy_ctrl/Chest_ctrl" index="1" unique_id=1488370769]
+transform = Transform3D(0.99900633, 0.04024478, -0.01914624, -0.04052521, 0.99907327, -0.01449125, 0.018545302, 0.015252756, 0.9997116, 0.00035666907, -0.0011322328, -0.0034866405)
+
+[node name="Elbow_L_ctrl" parent="bat_animflapping/ROOT_ctrl/Hip_ctrl/Tammy_ctrl/Chest_ctrl/Clavicle_L_ctrl" index="0" unique_id=1909973138]
+transform = Transform3D(0.9833365, -0.056695376, -0.17272723, 0.002320051, 0.95396227, -0.2999172, 0.18177919, 0.29451883, 0.9381977, -4.9266145e-18, -0.0013100785, -0.0090111)
+
+[node name="Hand_L_ctrl" parent="bat_animflapping/ROOT_ctrl/Hip_ctrl/Tammy_ctrl/Chest_ctrl/Clavicle_L_ctrl/Elbow_L_ctrl" index="0" unique_id=1270234092]
+transform = Transform3D(0.8308427, 0.38125947, 0.40539026, -0.45869306, 0.8816443, 0.110921584, -0.31512022, -0.27810818, 0.9073888, 0.00036686892, 0.0036763751, -0.010510848)
+
+[node name="Finger_L_2_ctrl" parent="bat_animflapping/ROOT_ctrl/Hip_ctrl/Tammy_ctrl/Chest_ctrl/Clavicle_L_ctrl/Elbow_L_ctrl/Hand_L_ctrl" index="1" unique_id=1852271260]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00093659793, -0.013067468, -0.0044099167)
+
+[node name="Finger_L_1_ctrl" parent="bat_animflapping/ROOT_ctrl/Hip_ctrl/Tammy_ctrl/Chest_ctrl/Clavicle_L_ctrl/Elbow_L_ctrl/Hand_L_ctrl" index="2" unique_id=1840589587]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000203085, -0.013122191, 0.0049477112)
+
+[node name="Clavicle_R_ctrl" parent="bat_animflapping/ROOT_ctrl/Hip_ctrl/Tammy_ctrl/Chest_ctrl" index="2" unique_id=218154194]
+transform = Transform3D(0.99900633, 0.04024478, 0.01914624, -0.04052521, 0.99907327, 0.01449125, -0.018545302, -0.015252756, 0.9997116, 0.00035666907, -0.0011322328, 0.0034866405)
+
+[node name="Elbow_R_ctrl" parent="bat_animflapping/ROOT_ctrl/Hip_ctrl/Tammy_ctrl/Chest_ctrl/Clavicle_R_ctrl" index="0" unique_id=43953092]
+transform = Transform3D(0.9833365, -0.056695376, 0.17272723, 0.002320051, 0.95396227, 0.2999172, -0.18177919, -0.29451883, 0.9381977, 2.1163626e-17, -0.0013100785, 0.0090111)
+
+[node name="Hand_R_ctrl" parent="bat_animflapping/ROOT_ctrl/Hip_ctrl/Tammy_ctrl/Chest_ctrl/Clavicle_R_ctrl/Elbow_R_ctrl" index="0" unique_id=25888676]
+transform = Transform3D(0.8308427, 0.38125947, -0.40539026, -0.45869306, 0.8816443, -0.110921584, 0.31512022, 0.27810818, 0.9073888, 0.00036686892, 0.0036763751, 0.010510848)
+
+[node name="Finger_R_2_ctrl" parent="bat_animflapping/ROOT_ctrl/Hip_ctrl/Tammy_ctrl/Chest_ctrl/Clavicle_R_ctrl/Elbow_R_ctrl/Hand_R_ctrl" index="1" unique_id=111093661]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0014194408, -0.0130627975, 0.0044099167)
+
+[node name="Finger_R_1_ctrl" parent="bat_animflapping/ROOT_ctrl/Hip_ctrl/Tammy_ctrl/Chest_ctrl/Clavicle_R_ctrl/Elbow_R_ctrl/Hand_R_ctrl" index="2" unique_id=1874669016]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00033618312, -0.013122191, -0.0049477112)
+
+[node name="main_player" type="AnimationPlayer" parent="." unique_id=2054203359]
+libraries/ = SubResource("AnimationLibrary_jp0ae")
+
+[node name="detectionRay" type="RayCast3D" parent="." unique_id=414412048]
+target_position = Vector3(0, 0, 0)
+collision_mask = 6
+
+[node name="BatCollision" type="Area3D" parent="." unique_id=652124075]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0974229, 0)
+collision_layer = 6
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BatCollision" unique_id=272064606]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0.001342772)
+shape = SubResource("CapsuleShape3D_8lkhw")
+
+[node name="DamageTimer" type="Timer" parent="." unique_id=1262313966]
+one_shot = true
+
+[node name="RetreatTimer" type="Timer" parent="." unique_id=1136112297]
+wait_time = 2.0
+one_shot = true
+
+[node name="AttackTimer" type="Timer" parent="." unique_id=766168132]
+wait_time = 2.0
+one_shot = true
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1743954621]
+freeze = true
+gravity_scale = 1.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=970076771]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -0.103384346, -0.01171875)
+shape = SubResource("CapsuleShape3D_jp0ae")
+debug_fill = false
+
+[editable path="bat_animflapping"]

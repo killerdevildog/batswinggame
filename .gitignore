@@ -1,3 +1,9 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Project documentation (local only)
+CAVE_GENERATION_PROPOSAL.md
+
+# Debug logs (too large for GitHub)
+data/rendering_debug_*.log*

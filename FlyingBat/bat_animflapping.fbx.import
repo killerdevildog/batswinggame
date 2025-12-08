@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dd7htfvoccnrc"
-path="res://.godot/imported/bat_animation_fly.fbx-51e6a5cbc5f6164977685360571f8ff2.scn"
+uid="uid://cuuy0bgkkaf64"
+path="res://.godot/imported/bat_animflapping.fbx-f0e4c2dadf9676a9380456f519634abd.scn"
 
 [deps]
 
-source_file="res://FlyingBat/bat_animation_fly.fbx"
-dest_files=["res://.godot/imported/bat_animation_fly.fbx-51e6a5cbc5f6164977685360571f8ff2.scn"]
+source_file="res://FlyingBat/bat_animflapping.fbx"
+dest_files=["res://.godot/imported/bat_animflapping.fbx-f0e4c2dadf9676a9380456f519634abd.scn"]
 
 [params]
 

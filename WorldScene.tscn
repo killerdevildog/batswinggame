@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bq8culck4dsrg"]
+
+[ext_resource type="PackedScene" uid="uid://b7juypewxwe62" path="res://CaveSections/StraightForward.tscn" id="1_beh5b"]
+[ext_resource type="PackedScene" uid="uid://chdvsotkxkr4v" path="res://Player/Player.tscn" id="2_pm5xc"]
+[ext_resource type="PackedScene" uid="uid://c484d3hbte6jo" path="res://FlyingBat/enemy_bat.tscn" id="3_ikocj"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_beh5b"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_pm5xc"]
+sky_material = SubResource("ProceduralSkyMaterial_beh5b")
+
+[sub_resource type="Environment" id="Environment_ikocj"]
+background_mode = 2
+sky = SubResource("Sky_pm5xc")
+ambient_light_source = 3
+ambient_light_color = Color(0.05, 0.05, 0.08, 1)
+ambient_light_sky_contribution = 0.05
+ambient_light_energy = 0.05
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="WorldScene" type="Node3D" unique_id=1060259833]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=386092378]
+environment = SubResource("Environment_ikocj")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=271172796]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+layers = 3
+light_color = Color(0.5370113, 0.5370113, 0.5370113, 1)
+light_energy = 0.3
+shadow_enabled = true
+directional_shadow_mode = 1
+
+[node name="Player" parent="." unique_id=2077326921 instance=ExtResource("2_pm5xc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.984806, 16.222477)
+
+[node name="EnemyBat" parent="." unique_id=1586485534 instance=ExtResource("3_ikocj")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.6867547, -6.4834633, -3.5403337)
+
+[node name="CaveSection1" parent="." unique_id=1350042813 instance=ExtResource("1_beh5b")]

@@ -1,40 +1,162 @@
-[gd_scene load_steps=3 format=3 uid="uid://chdvsotkxkr4v"]
+[gd_scene format=3 uid="uid://chdvsotkxkr4v"]
+
+[ext_resource type="PackedScene" uid="uid://kdfdmd5bltrv" path="res://BaseBallBat/BatScene.tscn" id="1_3qydi"]
+[ext_resource type="Script" uid="uid://cvwljchn2b4st" path="res://Player/player.gd" id="1_q3lat"]
+[ext_resource type="Shader" uid="uid://b1knm0hie7sfv" path="res://Player/Player.gdshader" id="2_tok1r"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l2ndj"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_3qydi"]
 
-[node name="Player" type="CharacterBody3D"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ddoul"]
+shader = ExtResource("2_tok1r")
+shader_parameter/intensity = 0.0
+shader_parameter/color = Color(1, 0, 0, 1)
+shader_parameter/softness = 1.0
+shader_parameter/radius = 0.7
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[sub_resource type="Animation" id="Animation_q3lat"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BatScene:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.24354464, -0.14012325, 0.2332995)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BatScene:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.39044562, -0.041795295, -0.61384594)]
+}
+
+[sub_resource type="Animation" id="Animation_tok1r"]
+resource_name = "Swing"
+length = 0.16666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BatScene:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.16666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.24354464, -0.14012325, 0.2332995), Vector3(0.054, -0.07, 0.233), Vector3(-0.206, -0.07, 0.233)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BatScene:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.16666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.39044562, -0.041795295, -0.61384594), Vector3(-0.98262036, 0.6981317, -0.6143559), Vector3(-1.277581, 1.4381514, -0.6143559)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ddoul"]
+_data = {
+&"RESET": SubResource("Animation_q3lat"),
+&"Swing": SubResource("Animation_tok1r")
+}
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_q3lat"]
+radius = 0.3
+
+[node name="Player" type="CharacterBody3D" unique_id=2077326921]
+script = ExtResource("1_q3lat")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=227302060]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_l2ndj")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1661483036]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_3qydi")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5653058, -0.29458094)
+[node name="smooth camera" type="Camera3D" parent="." unique_id=993355284]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5653058, -0.37574196)
+cull_mask = 1048573
+current = true
 
-[node name="RemoteTransform3D" type="RemoteTransform3D" parent="Camera3D"]
+[node name="SpotLight3D" type="SpotLight3D" parent="smooth camera" unique_id=235755863]
+layers = 3
+light_color = Color(1, 0.95, 0.85, 1)
+light_energy = 12.0
+light_indirect_energy = 1.5
+shadow_enabled = true
+spot_range = 30.0
+spot_attenuation = 2.0
+spot_angle = 25.0
+spot_angle_attenuation = 3.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="smooth camera" unique_id=1234567890]
+layers = 3
+light_color = Color(1, 0.9, 0.75, 1)
+light_energy = 4.0
+light_indirect_energy = 1.5
+light_volumetric_fog_energy = 0.3
+spot_range = 35.0
+spot_attenuation = 1.5
+spot_angle_attenuation = 2.0
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="smooth camera" unique_id=867309656]
 remote_path = NodePath("../../SubViewportContainer/SubViewport/Camera3D")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+[node name="DamageVignette" type="ColorRect" parent="smooth camera" unique_id=637383996]
+material = SubResource("ShaderMaterial_ddoul")
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(1, 1, 1, 0)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1191941888]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+stretch = true
 
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=990640876]
+transparent_bg = true
 handle_input_locally = false
+size = Vector2i(1152, 648)
 render_target_update_mode = 4
 
-[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5653058, -0.29458094)
-keep_aspect = 0
-fov = 97.69298
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=219871252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5653058, -0.37574196)
+cull_mask = 2
 
-[node name="BaseBallBatHolder" type="Node3D" parent="SubViewportContainer/SubViewport/Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.122047305, -0.55690634)
+[node name="BaseBallBatHolder" type="Node3D" parent="SubViewportContainer/SubViewport/Camera3D" unique_id=2032124117]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, -0.122047305, -0.55690634)
+
+[node name="BatScene" parent="SubViewportContainer/SubViewport/Camera3D/BaseBallBatHolder" unique_id=1787806016 instance=ExtResource("1_3qydi")]
+transform = Transform3D(0.80756456, 0.58851194, -0.03863851, -0.53266424, 0.7559178, 0.38060054, 0.25319546, -0.28677818, 0.923932, 0.24354464, -0.14012325, 0.2332995)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SubViewportContainer/SubViewport/Camera3D/BaseBallBatHolder" unique_id=223255803]
+libraries/ = SubResource("AnimationLibrary_ddoul")
+
+[node name="BatTarget" type="Area3D" parent="." unique_id=229850764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5251284, -0.6222694)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BatTarget" unique_id=1974222092]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1181525)
+shape = SubResource("SphereShape3D_q3lat")

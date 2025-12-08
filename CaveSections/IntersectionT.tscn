@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://ctsnu44vaj2d5"]
+
+[ext_resource type="ArrayMesh" uid="uid://cgajn1sgjm4o7" path="res://Rocks/rocks4/1rock_tres.tres" id="1_0m2v5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3j508"]
+albedo_color = Color(0.18717614, 0.18717614, 0.18717614, 1)
+
+[node name="IntersectionT" type="Node3D" unique_id=1350042813]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=669376403]
+operation = 2
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=168943011]
+flip_faces = true
+size = Vector3(30, 30, 30)
+material = SubResource("StandardMaterial3D_3j508")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=2009212067]
+transform = Transform3D(-4.3598615e-05, 0, 1944.0293, 0, 411.07977, 0, -997.42004, 0, -8.4976215e-05, 1.1637459e-06, -13.896752, 15.652727)
+mesh = ExtResource("1_0m2v5")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1650820479]
+transform = Transform3D(9.224499e-06, 1119.4226, -235.46948, 7.559647e-05, -136.59517, -1929.716, -1742.2736, 7.167052e-14, -8.497622e-05, 1.1637459e-06, -8.969197, 12.493456)
+operation = 2
+mesh = ExtResource("1_0m2v5")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1411413857]
+transform = Transform3D(229.34177, 1109.6819, -233.4205, 9.098621e-05, -136.59515, -1929.7158, -1727.1132, 147.35345, -30.995773, -3.3491263, -8.969197, 6.648074)
+operation = 2
+mesh = ExtResource("1_0m2v5")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=2069307100]
+transform = Transform3D(1174.999, 826.53827, -173.86147, 8.1279155e-05, -136.59515, -1929.716, -1286.4274, 754.9448, -158.802, 5.9145155, -8.969197, 6.0391264)
+operation = 2
+mesh = ExtResource("1_0m2v5")
+
+[node name="CSGMesh3D6" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1021080724]
+transform = Transform3D(-296.82117, 1103.058, -232.02725, 9.086379e-05, -136.59515, -1929.716, -1716.8037, -190.70966, 40.1155, 5.9145155, -8.969197, -0.7900133)
+operation = 2
+mesh = ExtResource("1_0m2v5")
+
+[node name="CSGMesh3D8" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1581609724]
+transform = Transform3D(217.45978, 1110.669, -233.62817, 9.086378e-05, -136.59514, -1929.7158, -1728.6494, 139.71931, -29.389927, -3.6822617, -8.969197, -1.9244394)
+operation = 2
+mesh = ExtResource("1_0m2v5")
+
+[node name="CSGMesh3D9" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=450100928]
+transform = Transform3D(217.45978, 1110.669, -233.62817, 9.086378e-05, -136.59514, -1929.7158, -1728.6494, 139.71931, -29.389927, -2.004422, -8.969197, -6.8258553)
+operation = 2
+mesh = ExtResource("1_0m2v5")
+
+[node name="CSGMesh3D10" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1915087611]
+transform = Transform3D(1742.1531, -13.168274, 2.7699966, 6.526895e-05, -136.59514, -1929.7158, 20.494751, 1119.3452, -235.45328, -10.806205, -8.969197, -0.50476456)
+operation = 2
+mesh = ExtResource("1_0m2v5")
+
+[node name="CSGMesh3D7" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1789287592]
+transform = Transform3D(1624.5392, -404.51923, 85.09035, 9.715583e-05, -136.59514, -1929.7158, 629.59546, 1043.7773, -219.55756, 10.314982, -8.969197, -0.7648058)
+operation = 2
+mesh = ExtResource("1_0m2v5")
+
+[node name="CSGMesh3D12" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1104490373]
+transform = Transform3D(9.224499e-06, 1119.4226, -235.46948, 7.559647e-05, -136.59517, -1929.716, -1742.2736, 7.167052e-14, -8.497622e-05, 1.1637459e-06, -3.238275, 12.493456)
+operation = 2
+mesh = ExtResource("1_0m2v5")
+
+[node name="CSGMesh3D13" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1643726332]
+transform = Transform3D(229.34177, 1109.6819, -233.4205, 9.098621e-05, -136.59515, -1929.7158, -1727.1132, 147.35345, -30.995773, -3.3491263, -3.238275, 6.648074)
+operation = 2
+mesh = ExtResource("1_0m2v5")
+
+[node name="CSGMesh3D14" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=725486571]
+transform = Transform3D(1174.999, 826.53827, -173.86147, 8.1279155e-05, -136.59515, -1929.716, -1286.4274, 754.9448, -158.802, 5.9145155, -3.238275, 6.0391264)
+operation = 2
+mesh = ExtResource("1_0m2v5")
+
+[node name="CSGMesh3D15" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=405784427]
+transform = Transform3D(-296.82117, 1103.058, -232.02725, 9.086379e-05, -136.59515, -1929.716, -1716.8037, -190.70966, 40.1155, 5.9145155, -3.238275, -0.7900133)
+operation = 2
+mesh = ExtResource("1_0m2v5")
+
+[node name="CSGMesh3D16" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=716998235]
+transform = Transform3D(217.45978, 1110.669, -233.62817, 9.086378e-05, -136.59514, -1929.7158, -1728.6494, 139.71931, -29.389927, -3.6822617, -3.238275, -1.9244394)
+operation = 2
+mesh = ExtResource("1_0m2v5")
+
+[node name="CSGMesh3D17" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1988982046]
+transform = Transform3D(217.45978, 1110.669, -233.62817, 9.086378e-05, -136.59514, -1929.7158, -1728.6494, 139.71931, -29.389927, -2.004422, -3.238275, -6.8258553)
+operation = 2
+mesh = ExtResource("1_0m2v5")
+
+[node name="CSGMesh3D18" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=744036534]
+transform = Transform3D(1742.1531, -13.168274, 2.7699966, 6.526895e-05, -136.59514, -1929.7158, 20.494751, 1119.3452, -235.45328, -10.806205, -3.238275, -0.50476456)
+operation = 2
+mesh = ExtResource("1_0m2v5")
+
+[node name="CSGMesh3D19" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=257092926]
+transform = Transform3D(1624.5392, -404.51923, 85.09035, 9.715583e-05, -136.59514, -1929.7158, 629.59546, 1043.7773, -219.55756, 10.314982, -3.238275, -0.9690409)
+operation = 2
+mesh = ExtResource("1_0m2v5")

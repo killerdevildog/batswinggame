@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://80f00r0jwik2"]
+
+[ext_resource type="ArrayMesh" uid="uid://cgajn1sgjm4o7" path="res://Rocks/rocks4/1rock_tres.tres" id="1_ro74h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3j508"]
+albedo_color = Color(0.18717614, 0.18717614, 0.18717614, 1)
+
+[node name="StraighWide" type="Node3D" unique_id=1350042813]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=669376403]
+operation = 2
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=168943011]
+flip_faces = true
+size = Vector3(30, 30, 30)
+material = SubResource("StandardMaterial3D_3j508")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=315277668]
+transform = Transform3D(-0.00020362245, 0, 3126.7783, 0, 2738.3416, 0, -4658.3384, 0, -0.00013667582, 0.2842406, -3.9203568, 0)
+operation = 2
+mesh = ExtResource("1_ro74h")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=2009212067]
+transform = Transform3D(-4.359861e-05, 0, 2944.838, 0, 424.80002, 0, -997.42, 0, -0.00012872294, -0.22274613, -11.95202, 15.652727)
+mesh = ExtResource("1_ro74h")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=370961190]
+transform = Transform3D(-5.2162024e-05, 579.4762, 1225.3558, -8.842293e-05, 2129.741, -333.40402, -2348.6328, -9.305181e-05, -1.466233e-05, 6.8052745, -3.3281646, -0.72084093)
+operation = 2
+mesh = ExtResource("1_ro74h")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1704908020]
+transform = Transform3D(953.54724, 549.29297, 1196.0806, -0.00012485686, 2107.8176, -339.78705, -3176.3245, 164.90024, 359.0689, 7.0448713, -7.8189354, 1.7482656)
+operation = 2
+mesh = ExtResource("1_ro74h")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1719093870]
+transform = Transform3D(953.54724, 549.29297, 1196.0806, -0.00012485686, 2107.8176, -339.78705, -3176.3245, 164.90024, 359.0689, -8.376473, -7.8189354, 1.7482656)
+operation = 2
+mesh = ExtResource("1_ro74h")
+
+[node name="CSGMesh3D6" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=138986897]
+transform = Transform3D(1243.1239, 246.7394, 1373.9592, -3165.8977, 666.9303, 63.75732, -2669.1453, -676.1357, 564.2825, -8.376473, -2.238502, -6.19417)
+operation = 2
+mesh = ExtResource("1_ro74h")

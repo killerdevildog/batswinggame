@@ -54,5 +54,6 @@ shadow_mesh = SubResource("ArrayMesh_71i0a")
 [node name="baseball_bat" type="Node3D" unique_id=1751553687]
 
 [node name="BaseballBat" type="MeshInstance3D" parent="." unique_id=1533674045]
+layers = 2
 mesh = SubResource("ArrayMesh_00ydn")
 skeleton = NodePath("")

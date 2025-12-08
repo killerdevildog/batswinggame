@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://kdfdmd5bltrv"]
+
+[ext_resource type="Script" uid="uid://dx8rmkdmwrx0l" path="res://BaseBallBat/bat_scene.gd" id="1_a3a8t"]
+[ext_resource type="PackedScene" uid="uid://b863bjj6x7l7m" path="res://BaseBallBat/baseball_bat_editable.tscn" id="1_qwxcn"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qwxcn"]
+radius = 0.11279297
+height = 0.82684326
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_a3a8t"]
+radius = 0.2422098
+
+[node name="BatScene" type="Node3D" unique_id=1787806016]
+script = ExtResource("1_a3a8t")
+
+[node name="baseball_bat" parent="." unique_id=1751553687 instance=ExtResource("1_qwxcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1406573, 0)
+
+[node name="BatAttackCollision" type="Area3D" parent="." unique_id=1958584388]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BatAttackCollision" unique_id=318016064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43335015, 0)
+shape = SubResource("CapsuleShape3D_qwxcn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="BatAttackCollision" unique_id=239477513]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.70194703, 0)
+shape = SubResource("SphereShape3D_a3a8t")

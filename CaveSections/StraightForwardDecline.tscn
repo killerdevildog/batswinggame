@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://csmecf3kumb0h"]
+
+[ext_resource type="ArrayMesh" uid="uid://cgajn1sgjm4o7" path="res://Rocks/rocks4/1rock_tres.tres" id="1_cmtwv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3j508"]
+albedo_color = Color(0.18717614, 0.18717614, 0.18717614, 1)
+
+[node name="StraightForwardDecline" type="Node3D" unique_id=1350042813]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=669376403]
+operation = 2
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=168943011]
+flip_faces = true
+size = Vector3(30, 30, 30)
+material = SubResource("StandardMaterial3D_3j508")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=315277668]
+transform = Transform3D(832.92865, 1587.7699, 1079.8921, -2242.209, 1096.4095, -1372.606, -4641.629, -244.71579, 856.8417, 2.1935463, -0.11865032, 2.125104)
+operation = 2
+mesh = ExtResource("1_cmtwv")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=643470946]
+transform = Transform3D(714.7392, 446.2308, 1874.6449, -2286.3042, 1724.5001, -289.65466, -4639.8228, -781.0196, 431.50778, -2.0906239, 2.7525787, -2.125104)
+operation = 2
+mesh = ExtResource("1_cmtwv")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=2009212067]
+transform = Transform3D(-4.3598615e-05, 0, 1944.0293, 0, 411.07977, 0, -997.42004, 0, -8.4976215e-05, 1.1637459e-06, 1.7637911, 16.301153)
+mesh = ExtResource("1_cmtwv")

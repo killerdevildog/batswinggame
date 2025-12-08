@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6pgi5uki6qrj"
-path.s3tc="res://.godot/imported/bat_animation_fly_0.png-6dafc7f5f372f5068d5e74b5a27c9f4e.s3tc.ctex"
+uid="uid://dmqxmiv0nxuwp"
+path.s3tc="res://.godot/imported/bat_animflapping_0.png-62580e827f7bdba7ffe6cdd5a0407eed.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "c1fd5439d77bd1e125761ad297befa3f"
+"md5": "7b0688c704177430f0bd806559d1887b"
 }
 
 [deps]
 
-source_file="res://FlyingBat/bat_animation_fly_0.png"
-dest_files=["res://.godot/imported/bat_animation_fly_0.png-6dafc7f5f372f5068d5e74b5a27c9f4e.s3tc.ctex"]
+source_file="res://FlyingBat/bat_animflapping_0.png"
+dest_files=["res://.godot/imported/bat_animflapping_0.png-62580e827f7bdba7ffe6cdd5a0407eed.s3tc.ctex"]
 
 [params]
 
