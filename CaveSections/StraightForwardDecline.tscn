@@ -29,3 +29,9 @@ mesh = ExtResource("1_cmtwv")
 [node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=2009212067]
 transform = Transform3D(-4.3598615e-05, 0, 1944.0293, 0, 411.07977, 0, -997.42004, 0, -8.4976215e-05, 1.1637459e-06, 1.7637911, 16.301153)
 mesh = ExtResource("1_cmtwv")
+
+[node name="ConnectionPointEntry" type="Node3D" parent="." unique_id=1195469309]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.943019, 14.99119)
+
+[node name="ConnectionPointExit" type="Node3D" parent="." unique_id=2117067823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.677308, -14.817459)

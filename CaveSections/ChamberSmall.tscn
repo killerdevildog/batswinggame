@@ -194,3 +194,9 @@ mesh = ExtResource("1_j6n7r")
 transform = Transform3D(-5.4348842e-05, 1122.0491, 7641.9204, 997.41986, 0.00016950553, 0.0003489664, -2.911838e-05, 3711.954, -2309.9985, -1.9002798, 9.316301, 12.407694)
 operation = 2
 mesh = ExtResource("1_j6n7r")
+
+[node name="ConnectionPointEntry" type="Node3D" parent="." unique_id=1672255135]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.102937, 29.992794)
+
+[node name="ConnectionPointExit" type="Node3D" parent="." unique_id=1945529044]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.102937, -29.927258)

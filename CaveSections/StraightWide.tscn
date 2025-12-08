@@ -16,13 +16,13 @@ flip_faces = true
 size = Vector3(30, 30, 30)
 material = SubResource("StandardMaterial3D_3j508")
 
-[node name="CSGMesh3D" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=315277668]
-transform = Transform3D(-0.00020362245, 0, 3126.7783, 0, 2738.3416, 0, -4658.3384, 0, -0.00013667582, 0.2842406, -3.9203568, 0)
-operation = 2
+[node name="step" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=2009212067]
+transform = Transform3D(-4.3598615e-05, 0, 2944.838, 251.2, 411.10715, 3.2418848e-05, -965.2696, 106.9858, -0.00012457374, -0.22274613, -13.174194, 15.652727)
 mesh = ExtResource("1_ro74h")
 
-[node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=2009212067]
-transform = Transform3D(-4.359861e-05, 0, 2944.838, 0, 424.80002, 0, -997.42, 0, -0.00012872294, -0.22274613, -11.95202, 15.652727)
+[node name="CSGMesh3D" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=315277668]
+transform = Transform3D(-0.00012454875, 2166.348, 1912.5413, 0.00016108912, 1674.9479, -2473.6465, -4658.338, 5.798664e-19, -0.00013667582, 2.960576, -7.0662084, 0)
+operation = 2
 mesh = ExtResource("1_ro74h")
 
 [node name="CSGMesh3D3" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=370961190]
@@ -41,6 +41,12 @@ operation = 2
 mesh = ExtResource("1_ro74h")
 
 [node name="CSGMesh3D6" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=138986897]
-transform = Transform3D(1243.1239, 246.7394, 1373.9592, -3165.8977, 666.9303, 63.75732, -2669.1453, -676.1357, 564.2825, -8.376473, -2.238502, -6.19417)
+transform = Transform3D(1243.1239, 246.7394, 1373.9591, -2273.522, 832.0189, -99.76738, -3460.9739, -457.93018, 559.0404, -8.376473, -0.6392298, -1.1016998)
 operation = 2
 mesh = ExtResource("1_ro74h")
+
+[node name="ConnectionPointEntry" type="Node3D" parent="." unique_id=369220025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.102937, 14.99119)
+
+[node name="ConnectionPointExit" type="Node3D" parent="." unique_id=93480306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.102937, -15.00214)

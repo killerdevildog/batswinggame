@@ -5,7 +5,7 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3j508"]
 albedo_color = Color(0.18717614, 0.18717614, 0.18717614, 1)
 
-[node name="TurnRight" type="Node3D" unique_id=1350042813]
+[node name="TurnLeft" type="Node3D" unique_id=1350042813]
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=669376403]
 operation = 2
@@ -59,3 +59,9 @@ mesh = ExtResource("1_p28xo")
 transform = Transform3D(1633.531, 277.625, 1168.6982, -7.960674e-05, 1420.1079, -442.5707, -1687.499, 268.74612, 1131.3221, 4.692107, -5.624707, 9.576023)
 operation = 2
 mesh = ExtResource("1_p28xo")
+
+[node name="ConnectionPointEntry" type="Node3D" parent="." unique_id=232420278]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.102937, 14.99119)
+
+[node name="ConnectionPointExit" type="Node3D" parent="." unique_id=1457221615]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.943899, -11.102937, -0.81443834)

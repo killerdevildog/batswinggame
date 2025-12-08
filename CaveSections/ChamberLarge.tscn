@@ -13,138 +13,129 @@ use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=168943011]
 flip_faces = true
-size = Vector3(90, 30, 90)
+size = Vector3(120, 30, 120)
 material = SubResource("StandardMaterial3D_3j508")
 
 [node name="Step" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=2009212067]
-transform = Transform3D(-4.3598615e-05, 0, 1944.0293, 0, 411.07977, 0, -997.42004, 0, -8.4976215e-05, 1.1637459e-06, -13.896752, 46.721207)
+transform = Transform3D(-4.3598615e-05, 0, 1944.0293, 0, 411.07977, 0, -997.42004, 0, -8.4976215e-05, 1.1637459e-06, -13.896752, 60.848724)
 mesh = ExtResource("1_wv74r")
 
 [node name="Enter" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1773603169]
-transform = Transform3D(-4.3598615e-05, 0, 1944.0293, 0, 3063.367, 0, -997.42004, 0, -8.4976215e-05, 1.1637459e-06, -3.8967524, 43.4339)
+transform = Transform3D(-4.3598615e-05, 0, 1944.0293, 0, 3063.367, 0, -997.42004, 0, -8.4976215e-05, 1.1637459e-06, -3.8967524, 58.25621)
 operation = 2
 mesh = ExtResource("1_wv74r")
 
-[node name="Enter2" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=2041380656]
-transform = Transform3D(-4.3598615e-05, 0, 1944.0293, 0, 3063.367, 0, -997.42004, 0, -8.4976215e-05, 1.1637459e-06, -3.8967524, 39.4883)
+[node name="Enter2" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1159223304]
+transform = Transform3D(4.08954e-05, 1061.8883, -1823.4954, 1.5113064e-05, -2873.4321, -673.8801, -997.42004, 0, -8.497621e-05, 1.1637459e-06, -3.8967524, 54.61283)
 operation = 2
 mesh = ExtResource("1_wv74r")
 
-[node name="Enter3" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=930622323]
-transform = Transform3D(-4.3598615e-05, 0, 1944.0293, 0, 3063.367, 0, -997.42004, 0, -8.4976215e-05, 1.1637459e-06, -2.160237, 36.005768)
+[node name="Enter3" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=998998322]
+transform = Transform3D(7.442031e-05, 1104.4972, -1850.5354, -1402.5773, -307.84143, -70.4395, -145.23904, 2972.8335, 680.2355, 1.1637459e-06, -7.6869044, 52.3273)
 operation = 2
 mesh = ExtResource("1_wv74r")
 
-[node name="Enter4" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=426990355]
-transform = Transform3D(-4.3598615e-05, 0, 1944.0293, 0, 3063.367, 0, -997.42004, 0, -8.4976215e-05, 1.1637459e-06, -1.1488354, 33.41442)
-operation = 2
-mesh = ExtResource("1_wv74r")
-
-[node name="Enter5" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=774963651]
-transform = Transform3D(-4.3598615e-05, 0, 1944.0293, -981.49585, -545.2117, -8.361953e-05, 177.51872, -3014.4587, 1.51238955e-05, 26.404562, 14.983802, 20.846558)
+[node name="Enter4" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=99802305]
+transform = Transform3D(-15.6344, -27.506866, -1842.4059, 421.64838, -254.78362, -65.83022, 40.76722, 2624.6355, -25.699224, 1.1637459e-06, -11.85043, 52.3273)
 mesh = ExtResource("1_wv74r")
 
 [node name="Exit" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1526954959]
-transform = Transform3D(-4.3598615e-05, 0, 1944.0293, 0, 3063.367, 0, -997.42004, 0, -8.4976215e-05, 1.1637459e-06, -3.8967524, -43.15301)
+transform = Transform3D(-4.3598615e-05, 0, 1944.0293, 0, 3063.367, 0, -997.42004, 0, -8.4976215e-05, 1.1637459e-06, -3.8967524, -60.522907)
 operation = 2
 mesh = ExtResource("1_wv74r")
 
-[node name="Exit2" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=364467163]
-transform = Transform3D(-4.3598615e-05, 0, 1944.0293, 0, 3063.367, 0, -997.42004, 0, -8.4976215e-05, 1.1637459e-06, -3.8967524, -39.851646)
+[node name="Exit2" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1530356939]
+transform = Transform3D(-4.3598615e-05, 0, 1944.0293, 0, 3063.367, 0, -997.42004, 0, -8.4976215e-05, 1.1637459e-06, -3.8967524, -57.37734)
 operation = 2
 mesh = ExtResource("1_wv74r")
 
-[node name="Exit3" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1406111494]
-transform = Transform3D(-4.3598615e-05, 0, 1944.0293, 0, 3063.367, 0, -997.42004, 0, -8.4976215e-05, 1.1637459e-06, -3.2332134, -36.278404)
+[node name="spacialsubtraction" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=212813165]
+transform = Transform3D(6.409547e-06, -14895.115, -41.58305, -0.00055556087, -171.84738, 3604.2744, -12710.593, 0, -0.00015755827, 7.924268, -5.909896, 3.77705)
 operation = 2
 mesh = ExtResource("1_wv74r")
 
-[node name="Exit4" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1298228937]
-transform = Transform3D(-4.3598615e-05, 0, 1944.0293, 0, 3063.367, 0, -997.42004, 0, -8.4976215e-05, 1.1637459e-06, -2.3018107, -32.6913)
+[node name="spacialsubtraction2" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1675921344]
+transform = Transform3D(-12710.29, -102.68712, -0.286835, -0.00055556087, -171.84738, 3604.2744, -87.62699, 14894.759, 41.582054, 5.5848913, -5.909896, -8.159517)
 operation = 2
 mesh = ExtResource("1_wv74r")
 
-[node name="Exit5" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=789853176]
-transform = Transform3D(-4.3598615e-05, 0, 1944.0293, 0, 3063.367, 0, -997.42004, 0, -8.4976215e-05, 1.1637459e-06, -1.1292162, -29.672586)
+[node name="spacialsubtraction3" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=448926061]
+transform = Transform3D(-10264.61, -42.564407, -0.28491238, -0.0004486614, -71.231735, 3580.1152, -70.76605, 6173.9644, 41.303333, 15.666221, 3.8314657, 33.0823)
 operation = 2
 mesh = ExtResource("1_wv74r")
 
-[node name="CsgMesh" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1291184254]
-transform = Transform3D(8141.8145, 1.6031674e-06, 64.01464, -6.0039015e-11, -4152.9683, 0.0012673711, 35.952206, -0.00036306048, -14496.897, -9.756919, 0.5888853, 7.0698605)
+[node name="spacialsubtraction4" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1158338726]
+transform = Transform3D(-9777.022, 1880.7262, 12.581758, -0.0004486614, -71.231735, 3580.1152, 3126.828, 5880.69, 39.3414, -14.348673, 3.8314657, 36.748226)
 operation = 2
 mesh = ExtResource("1_wv74r")
 
-[node name="CsgMesh2" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1406629660]
-transform = Transform3D(-455.91113, -0.00036249432, -14474.291, -6.261968e-11, -4152.9683, 0.0012673711, -8129.119, 2.0330015e-05, 811.7705, 6.169078, 1.0128126, 8.868155)
+[node name="spacialsubtraction5" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=227208618]
+transform = Transform3D(-10258.551, 216.3346, 1.4471016, -0.00044866145, -71.23174, 3580.1157, 359.6704, 6170.321, 41.27896, -14.348673, 3.8314657, -38.404778)
 operation = 2
 mesh = ExtResource("1_wv74r")
 
-[node name="CsgMesh3" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=2101696702]
-transform = Transform3D(1972.4602, -0.00035224867, -14065.186, -6.6229744e-11, -4152.9688, 0.0012673712, -7899.357, -8.795613e-05, -3512.0632, 2.0914717, 0.5913744, -9.684942)
+[node name="spacialsubtraction6" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1007935508]
+transform = Transform3D(-1540.2727, -6104.2085, -40.836693, -0.00044806433, -71.23174, 3580.1157, -10148.637, 926.4442, 6.1976805, -38.17727, 3.8314657, -0.37065506)
 operation = 2
 mesh = ExtResource("1_wv74r")
 
-[node name="CsgMesh4" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1316824388]
-transform = Transform3D(-7392.9, -6.365443e-05, -3412.8594, -1.0886391e-10, -1178.93, 0.0004830887, -5805.5313, 8.105904e-05, 4346.0146, -12.457912, 0.5913744, -9.309405)
+[node name="spacialsubtraction7" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=469205733]
+transform = Transform3D(-1540.2727, -6104.2085, -40.836693, -0.00044806433, -71.23174, 3580.1157, -10148.637, 926.4442, 6.1976805, -38.17727, -5.2330713, -0.37065506)
 operation = 2
 mesh = ExtResource("1_wv74r")
 
-[node name="CsgMesh5" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1509509949]
-transform = Transform3D(-2391.1235, 214.05618, -1487.485, -354.11365, -1445.3965, -220.28932, -1898.1923, 6.0430306e-05, 1914.8574, -20.059238, 7.13885, -24.419876)
+[node name="spacialsubtraction8" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=553848276]
+transform = Transform3D(-1540.2727, -6104.2085, -40.836693, -0.00044806433, -71.23174, 3580.1157, -10148.637, 926.4442, 6.1976805, -36.81533, -5.2330713, -21.084215)
 operation = 2
 mesh = ExtResource("1_wv74r")
 
-[node name="CsgMesh6" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1734876389]
-transform = Transform3D(-2391.1235, 214.05618, -1487.485, -354.11365, -1445.3965, -220.28932, -1898.1923, 6.0430306e-05, 1914.8574, -28.62947, 7.13885, -24.419876)
+[node name="spacialsubtraction9" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=265799132]
+transform = Transform3D(-10213.227, 618.4651, 4.1373234, -0.0004492458, -71.23174, 3580.1157, 1028.2378, 6143.0576, 41.09658, 18.509436, -5.2330713, -36.856003)
 operation = 2
 mesh = ExtResource("1_wv74r")
 
-[node name="CsgMesh7" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1396173199]
-transform = Transform3D(-2391.1233, 214.05615, -1487.4849, 119.723206, -1401.7142, -680.8329, -1927.225, -352.65845, 1803.2395, -28.62947, 9.014443, -32.05249)
+[node name="spacialsubtraction10" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1410768851]
+transform = Transform3D(-10354.401, 703.11176, 4.295413, -267.4509, -1870.0372, 3581.5564, 1007.5582, 6729.2944, 994.8475, 18.509436, 4.0138903, -32.399662)
 operation = 2
 mesh = ExtResource("1_wv74r")
 
-[node name="CsgMesh8" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1106540503]
-transform = Transform3D(-3024.2458, 184.28706, -306.48077, -354.11362, -1445.3964, -220.28935, -417.7815, -108.89587, 2405.2773, 27.967842, 7.13885, -35.0558)
+[node name="spacialsubtraction11" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1310103966]
+transform = Transform3D(-592.47485, -6752.0366, -994.2228, -267.4509, -1870.0374, 3581.5562, -10386.422, 433.31177, -35.511787, 33.66436, 4.0138903, -0.11018753)
 operation = 2
 mesh = ExtResource("1_wv74r")
 
-[node name="CsgMesh9" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1309365353]
-transform = Transform3D(-3024.2458, 184.28706, -306.48077, -354.11362, -1445.3964, -220.28935, -417.7815, -108.89587, 2405.2773, 20.589483, 7.13885, -30.695902)
+[node name="spacialsubtraction12" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=737125689]
+transform = Transform3D(-592.47485, -6752.0366, -994.2228, -267.4509, -1870.0374, 3581.5562, -10386.422, 433.31177, -35.511787, 5.096672, 4.0138903, -0.11018753)
 operation = 2
 mesh = ExtResource("1_wv74r")
 
-[node name="CsgMesh10" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=2074833623]
-transform = Transform3D(-3039.016, 4.8806, -363.26355, 119.72315, -1401.7144, -680.83295, -442.77673, -412.5096, 2309.1824, 16.706575, 9.014443, -37.267036)
+[node name="spacialsubtraction13" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1566316244]
+transform = Transform3D(-592.47485, -6752.0366, -994.2228, -267.4509, -1870.0374, 3581.5562, -10386.422, 433.31177, -35.511787, -18.99489, 4.0138903, -0.11018753)
 operation = 2
 mesh = ExtResource("1_wv74r")
 
-[node name="CsgMesh11" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=329331790]
-transform = Transform3D(725.9943, -169.1398, 2348.963, -354.11362, -1445.3964, -220.28935, 2965.3904, -131.19362, -601.3849, 18.799356, -6.1191807, -31.451069)
-operation = 2
+[node name="Enter5" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1207915505]
+transform = Transform3D(110.48257, -6731.387, -759.3825, 42.28631, -1595.7341, 3038.997, 371.4522, 2183.8027, -120.09468, -40.963825, -8.6075535, -57.50188)
 mesh = ExtResource("1_wv74r")
 
-[node name="CsgMesh12" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=910952531]
-transform = Transform3D(725.9943, -169.1398, 2348.963, -354.11362, -1445.3964, -220.28935, 2965.3904, -131.19362, -601.3849, 25.57126, -6.1191807, -26.198431)
-operation = 2
+[node name="Enter6" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1508288357]
+transform = Transform3D(381.30197, -1092.3904, -450.17087, 42.286304, -1595.7341, 3038.997, 69.22368, 6991.9424, 623.24207, -54.9881, -0.7457249, -33.812153)
 mesh = ExtResource("1_wv74r")
 
-[node name="CsgMesh13" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=229982249]
-transform = Transform3D(708.2004, -385.28183, 2280.553, 119.72317, -1401.7145, -680.833, 2988.331, 147.46498, -513.18835, 20.893284, -4.2435875, -20.167402)
-operation = 2
+[node name="Exit3" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=527069172]
+transform = Transform3D(-4.3598615e-05, 0, 1944.0293, 0, 3063.367, 0, -997.42004, 0, -8.4976215e-05, 46.165237, -3.8967524, -59.25184)
 mesh = ExtResource("1_wv74r")
 
-[node name="CsgMesh14" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1301563460]
-transform = Transform3D(2430.7065, -214.00833, 1446.6836, -354.11362, -1445.3964, -220.28935, 1847.2343, 4.5238724, -1945.8668, 24.184448, -4.0112915, 23.8957)
-operation = 2
+[node name="Exit4" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1331186781]
+transform = Transform3D(-4.3598615e-05, 0, 1944.0293, 0, 3063.367, 0, -997.42004, 0, -8.4976215e-05, 63.067596, -3.8967524, -59.25184)
 mesh = ExtResource("1_wv74r")
 
-[node name="CsgMesh15" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=328500629]
-transform = Transform3D(2430.7065, -214.00833, 1446.6836, -354.11362, -1445.3964, -220.28935, 1847.2343, 4.5238724, -1945.8668, 32.752766, -4.0112915, 23.714573)
-operation = 2
+[node name="Exit5" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=597581196]
+transform = Transform3D(-4.3598615e-05, 0, 1944.0293, 0, 3063.367, 0, -997.42004, 0, -8.4976215e-05, 63.067596, 3.418725, -53.77687)
 mesh = ExtResource("1_wv74r")
 
-[node name="CsgMesh16" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1786851710]
-transform = Transform3D(2431.3203, -206.55524, 1449.0425, 119.72314, -1401.7144, -680.83295, 1876.26, 357.10358, -1834.2736, 32.914078, -2.1356983, 31.345482)
-operation = 2
-mesh = ExtResource("1_wv74r")
+[node name="ConnectionPointEntry" type="Node3D" parent="." unique_id=1294142751]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.102937, 59.992146)
+
+[node name="ConnectionPointExit" type="Node3D" parent="." unique_id=1054147498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.102937, -59.903435)

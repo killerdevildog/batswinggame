@@ -44,3 +44,14 @@ mesh = ExtResource("1_3j508")
 transform = Transform3D(675.2969, 300.53082, 841.8721, -1719.7971, 812.3271, 39.066307, -1449.9484, -823.5393, 345.75528, -5.391654, -5.410856, -6.1941695)
 operation = 2
 mesh = ExtResource("1_3j508")
+
+[node name="CSGMesh3D7" type="CSGMesh3D" parent="CSGCombiner3D" unique_id=1188451015]
+transform = Transform3D(-494.96136, -1111.1522, -275.14258, 2284.1707, -201.06879, -146.42554, 231.64023, -391.56555, 855.96594, -0.9498844, -5.2715755, -13.187331)
+operation = 2
+mesh = ExtResource("1_3j508")
+
+[node name="ConnectionPointEntry" type="Node3D" parent="." unique_id=1004544611]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.102937, 14.99119)
+
+[node name="ConnectionPointExit" type="Node3D" parent="." unique_id=69727175]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.102937, -14.994607)

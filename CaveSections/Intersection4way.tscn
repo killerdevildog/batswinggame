@@ -94,3 +94,15 @@ mesh = ExtResource("1_ntiks")
 transform = Transform3D(-258.15134, -1072.096, -8.497622e-05, -1.1284152e-05, -4.6862802e-05, 1944.0293, -963.4338, 287.2673, 8.847025e-12, -13.999999, -10.149723, 0.6527271)
 operation = 2
 mesh = ExtResource("1_ntiks")
+
+[node name="ConnectionPointEntry" type="Node3D" parent="." unique_id=1419475848]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.102937, 14.99119)
+
+[node name="ConnectionPointExit" type="Node3D" parent="." unique_id=1895880943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.961338, -11.102937, 0.31777954)
+
+[node name="ConnectionPointExit2" type="Node3D" parent="." unique_id=1703186683]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.102937, -14.967125)
+
+[node name="ConnectionPointExit3" type="Node3D" parent="." unique_id=40145616]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.055298, -11.102937, 0.77361345)

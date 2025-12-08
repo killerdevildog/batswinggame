@@ -148,3 +148,9 @@ mesh = ExtResource("1_dbxgp")
 transform = Transform3D(2431.3203, -206.55524, 1449.0425, 119.72314, -1401.7144, -680.83295, 1876.26, 357.10358, -1834.2736, 32.914078, -2.1356983, 31.345482)
 operation = 2
 mesh = ExtResource("1_dbxgp")
+
+[node name="ConnectionPointEntry" type="Node3D" parent="." unique_id=1377029322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.102937, 44.999245)
+
+[node name="ConnectionPointExit" type="Node3D" parent="." unique_id=1485751280]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.102937, -44.991177)
